@@ -1,0 +1,21 @@
+{
+    "name": "wapi/wapi",
+    "description": "Framework.",
+    "require": {
+         "flexihash/flexihash": "^2.0"
+    },
+    "autoload": {
+        "files": ["conf/Config.php"],
+        "psr-4": {
+            "app\\": "app/",
+            "lib\\": "lib/"
+        }
+    },
+
+    "repositories": {
+        "packagist": {
+            "type": "composer",
+            "url": "https://packagist.phpcomposer.com"
+        }
+    }
+}

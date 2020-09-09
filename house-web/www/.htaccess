@@ -1,0 +1,8 @@
+﻿RewriteEngine on
+RewriteBase /myframe/house/www/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !.*\.(ico|gif|jpg|jpeg|png|js|css)
+
+RewriteRule ^(.*)/(.*)/(.*)?(.*)$ index.php?app=$1&c=$2&a=$3&$4 [L,QSA]
+RewriteRule ^(.*)/(.*)?(.*)$ index.php?c=$1&a=$2&$3 [L,QSA]
